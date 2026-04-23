@@ -1,0 +1,16 @@
+Bronnen: 
+https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial
+https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
+https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
+https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events#media
+https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
+https://developer.mozilla.org/en-US/docs/Web/API/Touch_events
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mix-blend-mode
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix
+https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations
+https://javascript.info/
+https://www.w3schools.com/
