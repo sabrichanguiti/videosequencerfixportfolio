@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video sequecer Sabri</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="media-layer" id="layer-video-a">
+    <video id="vid-a" src="media/clip_a.mp4" loop muted playsinline></video>
+  </div>
+  <div class="media-layer" id="layer-video-b">
+    <video id="vid-b" src="media/clip_b.mp4" loop muted playsinline></video>
+  </div>
+  <div class="media-layer" id="layer-video-c">
+    <video id="vid-c" src="media/clip_c.mp4" loop muted playsinline></video>
+  </div>
+
+  <div class="media-layer" id="layer-images">
+    <img class="overlay-img" id="img-1" src="media/overlay_1.png" alt="" />
+    <img class="overlay-img" id="img-2" src="media/overlay_2.png" alt="" />
+    <img class="overlay-img" id="img-3" src="media/overlay_3.png" alt="" />
+  </div>
+
+  <canvas id="pulse-canvas"></canvas>
+  <canvas id="fx-canvas"></canvas>
+
+  <div id="radio-wheel" aria-hidden="true">
+    <canvas id="wheel-canvas" width="500" height="500"></canvas>
+  </div>
+
+  <div id="ui-overlay">
+
+    <div id="title-block">
+      <span class="artist-label">TITLE</span>
+      <span class="track-label"><span id="artist-name">—</span></span>
+    </div>
+
+    <div id="stems-panel">
+      <div class="stems-label">STEMS</div>
+      <div class="stem-slot" id="stem-1"><kbd>1</kbd><div class="stem-bars"><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div></div><div class="stem-led"></div></div>
+      <div class="stem-slot" id="stem-2"><kbd>2</kbd><div class="stem-bars"><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div></div><div class="stem-led"></div></div>
+      <div class="stem-slot" id="stem-3"><kbd>3</kbd><div class="stem-bars"><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div></div><div class="stem-led"></div></div>
+      <div class="stem-slot" id="stem-4"><kbd>4</kbd><div class="stem-bars"><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div></div><div class="stem-led"></div></div>
+      <div class="stem-slot" id="stem-5"><kbd>5</kbd><div class="stem-bars"><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div></div><div class="stem-led"></div></div>
+      <div class="stem-slot" id="stem-6"><kbd>6</kbd><div class="stem-bars"><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div></div><div class="stem-led"></div></div>
+      <div class="stem-slot" id="stem-7"><kbd>7</kbd><div class="stem-bars"><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div></div><div class="stem-led"></div></div>
+      <div class="stem-slot" id="stem-8"><kbd>8</kbd><div class="stem-bars"><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div><div class="stem-bar"></div></div><div class="stem-led"></div></div>
+    </div>
+
+    <div id="key-guide">
+      <div class="key-row"><kbd>V</kbd><span>Video on/off</span></div>
+      <div class="key-row"><kbd>D</kbd><span>Cycle image overlays</span></div>
+      <div class="key-row"><kbd>F</kbd><span>Glitch (hold)</span></div>
+      <div class="key-row"><kbd>G</kbd><span>Scanlines toggle</span></div>
+      <div class="key-row"><kbd>H</kbd><span>Strobe toggle</span></div>
+      <div class="key-row"><kbd>J</kbd><span>Pulse boost (hold)</span></div>
+      <div class="key-row"><kbd>T</kbd><span>Cycle song</span></div>
+      <div class="key-row"><kbd>SHIFT</kbd><span>Song picker wheel</span></div>
+      <div class="key-row"><kbd>1–8</kbd><span>Toggle stems</span></div>
+      <div class="key-row"><kbd>SPACE</kbd><span>Play / pause</span></div>
+    </div>
+
+    <div id="active-keys"></div>
+
+    <div id="timeline">
+      <div id="tl-header">
+        <span id="pack-label">—</span>
+        <span id="seek-time">--:-- / --:--</span>
+        <span id="time-remaining">−--:--</span>
+      </div>
+      <div id="seekbar">
+        <div id="seekbar-track"></div>
+        <div id="seekbar-progress"></div>
+        <div id="seekbar-thumb"></div>
+      </div>
+      <div id="beat-grid"></div>
+    </div>
+
+  </div>
+
+  <script src="sequencer.js"></script>
+</body>
+</html>
